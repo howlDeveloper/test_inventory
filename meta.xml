@@ -1,5 +1,4 @@
 <meta>
-  <oop>false</oop>
 
   <!--Utils-->
   <script src="src/utils/math.lua" type="client"/>
