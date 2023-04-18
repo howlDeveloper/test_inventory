@@ -1,0 +1,18 @@
+<meta>
+  <oop>false</oop>
+
+  <!--Utils-->
+  <script src="src/utils/math.lua" type="client"/>
+
+  <!--Config-->
+  <script src="src/core/config/config.lua" type="shared"/>
+
+  <!--Handlers-->
+  <script src="src/core/client/listener.lua" type="client"/>
+
+  <!--Client Side-->
+  <script src="src/core/client/main.lua" type="client"/>
+
+    <!--SErver Side-->
+  <script src="src/core/server/main.lua" type="server"/>
+</meta>
