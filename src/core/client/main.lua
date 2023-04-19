@@ -1,3 +1,9 @@
+local tick = getTickCount()
+local currentWeight = 0
+local initialWeight = currentWeight
+local finalWeight = currentWeight
+
+
 function checkItemType(id)
 
   if not(id) then 
@@ -8,7 +14,6 @@ function checkItemType(id)
     return 0
   elseif (idList[tonumber(id)].type == "misc") then
     return 1
-  elseif (idList[tonumber(id)].type == "ammo")
   end
 end
 
@@ -39,25 +44,35 @@ function setWeight(addweight)
     print(weight)
   else
     weight = weight + addweight
+    tick = getTickCount()
     print(weight)
   end
 end
 
 function drawWeight()
-  local sx, sy = guiGetScreenSize()
-  local color = tocolor(50, 255, 0, 255)
 
-  if (weight >= 12) then
-    color = tocolor(255, 194, 34, 255)
+  local color = tocolor(0, 255, 0, 255)
+  local progress = (getTickCount() - tick) / 2500
+
+  currentWeight = interpolateBetween(initialWeight, 0, 0, finalWeight, 0, 0, progress, 'Linear')
+  initialWeight = currentWeight
+  finalWeight = weight
+
+  if weight >= 8 then
+    color = tocolor(255, 255, 0, 255)
   end
 
-  if (weight >= 16) then
-    color = tocolor(255, 14, 14, 255)
+  if weight >= 12 then
+    color = tocolor(255, 0, 0, 255)
   end
 
   dxDrawRectangle(
-    sx / 2, sy / 2,
-    10, -weight, color
+    1880, 1050,
+    30, -max_weight * 6, tocolor(11, 11, 11, 150)
+  )
+
+  dxDrawRectangle(
+    1880, 1050,
+    30, -currentWeight * 6, color
   )
 end
-

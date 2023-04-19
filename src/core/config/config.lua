@@ -33,23 +33,5 @@ idList = {
   },
 }
 
-max_weight = 20.00
+max_weight = 20
 weight = 00.00
-
-{
-  ammo = {
-    ak = 0,
-    m4 = 0,
-    colt = 0,
-  },
-
-  misc = {
-    bandage = 0
-  }
-
-  weapons = {
-    ak47 = 0
-    m4 = 0
-    colt = 0
-  }
-}

@@ -1,17 +1,21 @@
 <meta>
+    <!--Utils-->
+    <script src="src/utils/math.lua" type="client" />
+    <script src="src/utils/utils.lua" type="client" />
+    <script src="src/utils/responsive.lua" type="client" />
+    
+    <!--Config-->
+    <script src="src/core/config/config.lua" type="shared" />
+    
+    <!--Handlers-->
+    <script src="src/core/client/listener.lua" type="client" />
+    
+    <!--Client Side-->
+    <script src="src/core/client/main.lua" type="client" />
+    
+    <!--Server Side-->
+    <script src="src/core/server/main.lua" type="server" />
 
-  <!--Utils-->
-  <script src="src/utils/math.lua" type="client"/>
 
-  <!--Config-->
-  <script src="src/core/config/config.lua" type="shared"/>
-
-  <!--Handlers-->
-  <script src="src/core/client/listener.lua" type="client"/>
-
-  <!--Client Side-->
-  <script src="src/core/client/main.lua" type="client"/>
-
-    <!--SErver Side-->
-  <script src="src/core/server/main.lua" type="server"/>
+    <min_mta_version client="1.5.8-9.20979"></min_mta_version>
 </meta>
